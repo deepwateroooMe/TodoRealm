@@ -2,11 +2,6 @@ package com.ddmeng.todorealm.detail.task;
 
 import android.content.DialogInterface;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
-import android.support.v4.view.MenuItemCompat;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -16,6 +11,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.inputmethod.EditorInfo;
 import android.widget.TextView;
+
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.core.view.MenuItemCompat;
+import androidx.fragment.app.Fragment;
 
 import com.ddmeng.todorealm.R;
 import com.ddmeng.todorealm.data.TodoRepository;
@@ -112,8 +113,9 @@ public class TaskDetailFragment extends Fragment implements TaskDetailContract.V
                                 presenter.onDeleteMenuItemClicked();
                             }
                         })
-                        .setNegativeButton(R.string.cancel, null)
-                        .show(getFragmentManager());
+                        .setNegativeButton(R.string.cancel, null);
+//                        .show();
+//                        .show(getActivity().getSupportFragmentManager());
                 return true;
             }
         }

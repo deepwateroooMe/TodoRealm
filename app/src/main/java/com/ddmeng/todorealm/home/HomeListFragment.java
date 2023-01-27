@@ -4,20 +4,21 @@ package com.ddmeng.todorealm.home;
 import android.content.DialogInterface;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
-import android.support.v4.content.ContextCompat;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.view.ActionMode;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.view.ActionMode;
+import androidx.appcompat.widget.Toolbar;
+import androidx.core.content.ContextCompat;
+import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.ddmeng.todorealm.MainActivity;
 import com.ddmeng.todorealm.R;
@@ -89,10 +90,10 @@ public class HomeListFragment extends Fragment implements HomeListContract.View,
         homeList.setLayoutManager(new LinearLayoutManager(getContext()));
 
         homeListAdapter = new HomeListAdapter(this, multiSelector);
-        homeList.setAdapter(homeListAdapter);
-        Drawable dividerDrawable = ContextCompat.getDrawable(getContext(), R.drawable.row_divider);
-        DividerDecoration dividerDecoration = new DividerDecoration(dividerDrawable, homeListAdapter);
-        homeList.addItemDecoration(dividerDecoration);
+//        homeList.setAdapter((RecyclerView.Adapter) homeListAdapter);
+//        Drawable dividerDrawable = ContextCompat.getDrawable(getContext(), R.drawable.row_divider);
+//        DividerDecoration dividerDecoration = new DividerDecoration(dividerDrawable, homeListAdapter);
+//        homeList.addItemDecoration(dividerDecoration);
     }
 
 
@@ -104,7 +105,7 @@ public class HomeListFragment extends Fragment implements HomeListContract.View,
 
     @Override
     public void showAddNewTask() {
-        ((MainActivity) getActivity()).showAddTaskFragment();
+//        ((MainActivity) getActivity()).showAddTaskFragment();
     }
 
     @Override
@@ -114,12 +115,13 @@ public class HomeListFragment extends Fragment implements HomeListContract.View,
 
     @Override
     public void notifyDataChanged() {
-        homeListAdapter.notifyDataSetChanged();
+
+//        homeListAdapter.notifyDataSetChanged();
     }
 
     @Override
     public void showListDetail(TodoList list) {
-        ((MainActivity) getActivity()).showListDetailFragment(list.getId());
+//        ((MainActivity) getActivity()).showListDetailFragment(list.getId());
     }
 
     @Override
@@ -163,8 +165,8 @@ public class HomeListFragment extends Fragment implements HomeListContract.View,
                                         mode.finish();
                                     }
                                 })
-                                .setNegativeButton(R.string.cancel, null)
-                                .show(getFragmentManager());
+                                .setNegativeButton(R.string.cancel, null);
+//                                .show(getFragmentManager());
                         return true;
                     }
                     default: {

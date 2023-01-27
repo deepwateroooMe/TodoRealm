@@ -1,8 +1,9 @@
 package com.ddmeng.todorealm.home.add.task;
 
-import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.TextView;
+
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.ddmeng.todorealm.R;
 import com.ddmeng.todorealm.data.models.TodoList;

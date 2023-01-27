@@ -4,15 +4,6 @@ package com.ddmeng.todorealm.detail.list;
 import android.content.DialogInterface;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
-import android.support.v4.content.ContextCompat;
-import android.support.v4.view.MenuItemCompat;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.view.ActionMode;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.Toolbar;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -23,6 +14,16 @@ import android.view.ViewGroup;
 import android.view.inputmethod.EditorInfo;
 import android.widget.EditText;
 import android.widget.TextView;
+
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.view.ActionMode;
+import androidx.appcompat.widget.Toolbar;
+import androidx.core.content.ContextCompat;
+import androidx.core.view.MenuItemCompat;
+import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.ddmeng.todorealm.MainActivity;
 import com.ddmeng.todorealm.R;
@@ -101,8 +102,8 @@ public class ListDetailFragment extends Fragment implements ListDetailContract.V
         adapter = new TaskListAdapter(this, multiSelector);
         tasksList.setAdapter(adapter);
         Drawable dividerDrawable = ContextCompat.getDrawable(getContext(), R.drawable.row_divider);
-        DividerDecoration dividerDecoration = new DividerDecoration(dividerDrawable, adapter);
-        tasksList.addItemDecoration(dividerDecoration);
+//        RecyclerView.ItemDecoration dividerDecoration = new RecyclerView.ItemDecoration(dividerDrawable, adapter);
+//        tasksList.addItemDecoration(dividerDecoration);
 
     }
 
@@ -152,8 +153,8 @@ public class ListDetailFragment extends Fragment implements ListDetailContract.V
                                 presenter.onDeleteMenuItemClicked();
                             }
                         })
-                        .setNegativeButton(R.string.cancel, null)
-                        .show(getFragmentManager());
+                        .setNegativeButton(R.string.cancel, null);
+//                        .show(getFragmentManager());
                 return true;
             }
         }
@@ -178,7 +179,7 @@ public class ListDetailFragment extends Fragment implements ListDetailContract.V
 
     @Override
     public void showTaskDetail(Task task) {
-        ((MainActivity) (getActivity())).showTaskDetailFragment(task.getId());
+//        ((MainActivity) (getActivity())).showTaskDetailFragment(task.getId());
     }
 
     @Override
@@ -209,8 +210,8 @@ public class ListDetailFragment extends Fragment implements ListDetailContract.V
                                         mode.finish();
                                     }
                                 })
-                                .setNegativeButton(R.string.cancel, null)
-                                .show(getFragmentManager());
+                                .setNegativeButton(R.string.cancel, null);
+//                                .show(getFragmentManager());
                         return true;
                     }
                     default: {

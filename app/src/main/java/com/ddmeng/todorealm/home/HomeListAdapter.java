@@ -1,9 +1,10 @@
 package com.ddmeng.todorealm.home;
 
-import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.ddmeng.todorealm.R;
 import com.ddmeng.todorealm.data.models.TodoList;
@@ -40,7 +41,7 @@ public class HomeListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
         switch (viewType) {
             case VIEW_TYPE_HEADER: {
                 View headerView = layoutInflater.inflate(R.layout.home_header_view_holder_layout, parent, false);
-                return new HomeHeaderViewHolder(headerView);
+                return new RecyclerView.ViewHolder(headerView);
             }
             case VIEW_TYPE_FOOTER: {
                 View footerView = layoutInflater.inflate(R.layout.home_footer_view_holder_layout, parent, false);

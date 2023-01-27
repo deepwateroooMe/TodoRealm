@@ -1,10 +1,11 @@
 package com.ddmeng.todorealm.detail.list;
 
-import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.TextView;
+
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.ddmeng.todorealm.R;
 import com.ddmeng.todorealm.data.models.Task;

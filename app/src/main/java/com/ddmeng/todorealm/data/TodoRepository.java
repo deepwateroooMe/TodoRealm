@@ -1,6 +1,6 @@
 package com.ddmeng.todorealm.data;
 
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 
 import com.ddmeng.todorealm.data.models.Task;
 import com.ddmeng.todorealm.data.models.TodoList;

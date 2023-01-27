@@ -2,11 +2,6 @@ package com.ddmeng.todorealm.home.add.task;
 
 
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.design.widget.TextInputLayout;
-import android.support.v4.app.Fragment;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -16,9 +11,15 @@ import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.fragment.app.Fragment;
+
 import com.ddmeng.todorealm.R;
 import com.ddmeng.todorealm.data.TodoRepository;
 import com.ddmeng.todorealm.home.add.list.AddListDialogFragment;
+import com.google.android.material.textfield.TextInputLayout;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -76,7 +77,7 @@ public class AddTaskFragment extends Fragment implements AddTaskContract.View,
     public void showSelectListDialog() {
         SelectListDialog selectListDialog = new SelectListDialog();
         selectListDialog.setCallback(this);
-        selectListDialog.show(getChildFragmentManager(), SelectListDialog.TAG);
+//        selectListDialog.show(getChildFragmentManager(), SelectListDialog.TAG);
     }
 
     @Override
