@@ -77,7 +77,7 @@ public class AddTaskFragment extends Fragment implements AddTaskContract.View,
     public void showSelectListDialog() {
         SelectListDialog selectListDialog = new SelectListDialog();
         selectListDialog.setCallback(this);
-//        selectListDialog.show(getChildFragmentManager(), SelectListDialog.TAG);
+        selectListDialog.show(getChildFragmentManager(), SelectListDialog.TAG);
     }
 
     @Override

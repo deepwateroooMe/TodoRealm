@@ -1,9 +1,9 @@
 package com.ddmeng.todorealm;
 
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 
 import com.ddmeng.todorealm.data.TodoRepository;
 import com.ddmeng.todorealm.detail.list.ListDetailFragment;

@@ -113,9 +113,8 @@ public class TaskDetailFragment extends Fragment implements TaskDetailContract.V
                                 presenter.onDeleteMenuItemClicked();
                             }
                         })
-                        .setNegativeButton(R.string.cancel, null);
-//                        .show();
-//                        .show(getActivity().getSupportFragmentManager());
+                        .setNegativeButton(R.string.cancel, null)
+                        .show(getActivity().getSupportFragmentManager());
                 return true;
             }
         }

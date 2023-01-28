@@ -39,18 +39,18 @@ public class HomeListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
     public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         LayoutInflater layoutInflater = LayoutInflater.from(parent.getContext());
         switch (viewType) {
-            case VIEW_TYPE_HEADER: {
-                View headerView = layoutInflater.inflate(R.layout.home_header_view_holder_layout, parent, false);
-                return new RecyclerView.ViewHolder(headerView);
-            }
-            case VIEW_TYPE_FOOTER: {
-                View footerView = layoutInflater.inflate(R.layout.home_footer_view_holder_layout, parent, false);
-                return new HomeFooterViewHolder(footerView, callback);
-            }
-            case VIEW_TYPE_LIST: {
-                View listView = layoutInflater.inflate(R.layout.home_list_view_holder_layout, parent, false);
-                return new HomeListViewHolder(listView, callback, multiSelector);
-            }
+        case VIEW_TYPE_HEADER: {
+            View headerView = layoutInflater.inflate(R.layout.home_header_view_holder_layout, parent, false);
+            return new HomeHeaderViewHolder(headerView);
+        }
+        case VIEW_TYPE_FOOTER: {
+            View footerView = layoutInflater.inflate(R.layout.home_footer_view_holder_layout, parent, false);
+            return new HomeFooterViewHolder(footerView, callback);
+        }
+        case VIEW_TYPE_LIST: {
+            View listView = layoutInflater.inflate(R.layout.home_list_view_holder_layout, parent, false);
+            return new HomeListViewHolder(listView, callback, multiSelector);
+        }
         }
         return null;
     }

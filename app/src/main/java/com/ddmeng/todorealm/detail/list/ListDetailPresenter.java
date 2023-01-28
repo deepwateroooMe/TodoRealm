@@ -141,6 +141,6 @@ class ListDetailPresenter implements ListDetailContract.Presenter {
 
     @Override
     public void onDestroy() {
-        list.removeChangeListeners();
+        list.removeAllChangeListeners();
     }
 }

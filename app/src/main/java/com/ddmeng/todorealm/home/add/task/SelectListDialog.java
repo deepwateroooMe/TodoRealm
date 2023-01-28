@@ -83,17 +83,17 @@ public class SelectListDialog extends DialogFragment implements SelectionsListAd
     private void initViews() {
         selectionsList.setLayoutManager(new LinearLayoutManager(getContext()));
         adapter = new SelectionsListAdapter(this);
-//        selectionsList.setAdapter(adapter);
+        selectionsList.setAdapter(adapter);
         Drawable dividerDrawable = ContextCompat.getDrawable(getContext(), R.drawable.row_divider);
-//        DividerDecoration dividerDecoration = new DividerDecoration(dividerDrawable, adapter);
-//        selectionsList.addItemDecoration(dividerDecoration);
+        DividerDecoration dividerDecoration = new DividerDecoration(dividerDrawable, adapter);
+        selectionsList.addItemDecoration(dividerDecoration);
     }
 
     private void loadData() {
         repository = TodoRepository.getInstance();
         RealmResults<TodoList> allLists = repository.getAllLists();
         adapter.setSelections(allLists);
-//        adapter.notifyDataSetChanged();
+        adapter.notifyDataSetChanged();
     }
 
     @Override

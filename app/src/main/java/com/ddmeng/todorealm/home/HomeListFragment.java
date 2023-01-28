@@ -90,10 +90,10 @@ public class HomeListFragment extends Fragment implements HomeListContract.View,
         homeList.setLayoutManager(new LinearLayoutManager(getContext()));
 
         homeListAdapter = new HomeListAdapter(this, multiSelector);
-//        homeList.setAdapter((RecyclerView.Adapter) homeListAdapter);
-//        Drawable dividerDrawable = ContextCompat.getDrawable(getContext(), R.drawable.row_divider);
-//        DividerDecoration dividerDecoration = new DividerDecoration(dividerDrawable, homeListAdapter);
-//        homeList.addItemDecoration(dividerDecoration);
+        homeList.setAdapter((RecyclerView.Adapter) homeListAdapter);
+        Drawable dividerDrawable = ContextCompat.getDrawable(getContext(), R.drawable.row_divider);
+        DividerDecoration dividerDecoration = new DividerDecoration(dividerDrawable, homeListAdapter);
+        homeList.addItemDecoration(dividerDecoration);
     }
 
 
@@ -105,7 +105,7 @@ public class HomeListFragment extends Fragment implements HomeListContract.View,
 
     @Override
     public void showAddNewTask() {
-//        ((MainActivity) getActivity()).showAddTaskFragment();
+        ((MainActivity) getActivity()).showAddTaskFragment();
     }
 
     @Override
@@ -115,13 +115,12 @@ public class HomeListFragment extends Fragment implements HomeListContract.View,
 
     @Override
     public void notifyDataChanged() {
-
-//        homeListAdapter.notifyDataSetChanged();
+        homeListAdapter.notifyDataSetChanged();
     }
 
     @Override
     public void showListDetail(TodoList list) {
-//        ((MainActivity) getActivity()).showListDetailFragment(list.getId());
+        ((MainActivity) getActivity()).showListDetailFragment(list.getId());
     }
 
     @Override
@@ -165,8 +164,8 @@ public class HomeListFragment extends Fragment implements HomeListContract.View,
                                         mode.finish();
                                     }
                                 })
-                                .setNegativeButton(R.string.cancel, null);
-//                                .show(getFragmentManager());
+                                .setNegativeButton(R.string.cancel, null)
+                                .show(getFragmentManager());
                         return true;
                     }
                     default: {

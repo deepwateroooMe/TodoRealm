@@ -1,0 +1,94 @@
+% Created 2023-01-27 Fri 19:48
+\documentclass[9pt, b5paper]{article}
+\usepackage{xeCJK}
+\usepackage{minted}
+\usepackage[T1]{fontenc}
+\usepackage[scaled]{beraserif}
+\usepackage[scaled]{berasans}
+\usepackage[scaled]{beramono}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{multirow}
+\usepackage{multicol}
+\usepackage{float}
+\usepackage{textcomp}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\usepackage{latexsym}
+\usepackage{natbib}
+\usepackage{geometry}
+\geometry{left=1.2cm,right=1.2cm,top=1.5cm,bottom=1.2cm}
+\newminted{common-lisp}{fontsize=\footnotesize} 
+\usepackage[xetex,colorlinks=true,CJKbookmarks=true,linkcolor=blue,urlcolor=blue,menucolor=blue]{hyperref}
+\author{deepwaterooo}
+\date{\today}
+\title{unity游戏热更新服务端服务器}
+\hypersetup{
+  pdfkeywords={},
+  pdfsubject={},
+  pdfcreator={Emacs 27.2 (Org mode 8.2.7c)}}
+\begin{document}
+
+\maketitle
+\tableofcontents
+
+
+\section{An Android Todo-list sample application to play with Realm.}
+\label{sec-1}
+
+\subsection{Features}
+\label{sec-1-1}
+\subsubsection{Basic Features}
+\label{sec-1-1-1}
+\begin{itemize}
+\item Home List: List of lists.
+\begin{itemize}
+\item Query all lists.
+\item Add a new list.
+\item Delete a list.
+\item Edit a list.
+\item Click to show list detail.
+\item FAB to add a task and choose a target list.
+\end{itemize}
+\item List Detail: List of tasks.
+\begin{itemize}
+\item Query all tasks in this list.
+\item Add a new task.
+\item Delete a task.
+\item Mark a task as done.
+\item Click to show task detail.
+\item Show all completed tasks.
+\item Mark a completed task as to-do.
+\end{itemize}
+\item Task Detail.
+\begin{itemize}
+\item Edit a task's title.
+\item Edit a task's note.
+\end{itemize}
+\end{itemize}
+
+\subsubsection{Features backlog}
+\label{sec-1-1-2}
+\begin{itemize}
+\item $\square$ Add due date to task.
+\item $\square$ About screen.
+\item Confirm before deleting.
+\item $\square$ Task priority, mark a task as important, urgent or current doing.
+\item $\square$ Drag to change the item order in list.
+\item $\square$ Settings screen:
+\begin{itemize}
+\item $\square$ Change the color theme of the app.
+\item $\square$ Send feedback.
+\end{itemize}
+\end{itemize}
+
+\subsection{References}
+\label{sec-1-2}
+\begin{itemize}
+\item\relax [realm-java](\url{https://github.com/realm/realm-java})
+\item\relax [Realm Doc](\url{https://realm.io/docs/java/latest/})
+\item In Progress, will make it work in the evening \url{https://www.cnblogs.com/mengdd/p/android-realm-database-guides.html}
+\item easily migration into AndroidX. will study source code to digest necessary concepts and the project better. Love my dear cousin!
+\end{itemize}
+% Emacs 27.2 (Org mode 8.2.7c)
+\end{document}

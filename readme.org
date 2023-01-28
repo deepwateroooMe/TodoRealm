@@ -1,8 +1,11 @@
-# TodoRealm
-An Android Todo-list sample application to play with Realm.
+#+latex_class: cn-article
+#+title: unity游戏热更新服务端服务器
+#+author: deepwaterooo 
 
-## Features
-### Basic Features
+* An Android Todo-list sample application to play with Realm.
+
+** Features
+*** Basic Features
 - [x] Home List: List of lists.
     - [x] Query all lists.
     - [x] Add a new list.
@@ -22,8 +25,7 @@ An Android Todo-list sample application to play with Realm.
     - [x] Edit a task's title.
     - [x] Edit a task's note.
 
-
-### Features backlog
+*** Features backlog
 - [ ] Add due date to task.
 - [ ] About screen.
 - [x] Confirm before deleting.
@@ -33,7 +35,8 @@ An Android Todo-list sample application to play with Realm.
     - [ ] Change the color theme of the app.
     - [ ] Send feedback.
 
-## References
+** References
 - [realm-java](https://github.com/realm/realm-java)
 - [Realm Doc](https://realm.io/docs/java/latest/)
 - In Progress, will make it work in the evening https://www.cnblogs.com/mengdd/p/android-realm-database-guides.html
+- easily migration into AndroidX. will study source code to digest necessary concepts and the project better. Love my dear cousin!

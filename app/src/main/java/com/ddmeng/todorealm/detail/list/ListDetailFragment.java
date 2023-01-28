@@ -102,9 +102,8 @@ public class ListDetailFragment extends Fragment implements ListDetailContract.V
         adapter = new TaskListAdapter(this, multiSelector);
         tasksList.setAdapter(adapter);
         Drawable dividerDrawable = ContextCompat.getDrawable(getContext(), R.drawable.row_divider);
-//        RecyclerView.ItemDecoration dividerDecoration = new RecyclerView.ItemDecoration(dividerDrawable, adapter);
-//        tasksList.addItemDecoration(dividerDecoration);
-
+        DividerDecoration dividerDecoration = new DividerDecoration(dividerDrawable, adapter);
+        tasksList.addItemDecoration(dividerDecoration);
     }
 
     @Override
@@ -153,8 +152,8 @@ public class ListDetailFragment extends Fragment implements ListDetailContract.V
                                 presenter.onDeleteMenuItemClicked();
                             }
                         })
-                        .setNegativeButton(R.string.cancel, null);
-//                        .show(getFragmentManager());
+                        .setNegativeButton(R.string.cancel, null)
+                        .show(getFragmentManager());
                 return true;
             }
         }
@@ -179,7 +178,7 @@ public class ListDetailFragment extends Fragment implements ListDetailContract.V
 
     @Override
     public void showTaskDetail(Task task) {
-//        ((MainActivity) (getActivity())).showTaskDetailFragment(task.getId());
+        ((MainActivity) (getActivity())).showTaskDetailFragment(task.getId());
     }
 
     @Override
@@ -210,8 +209,8 @@ public class ListDetailFragment extends Fragment implements ListDetailContract.V
                                         mode.finish();
                                     }
                                 })
-                                .setNegativeButton(R.string.cancel, null);
-//                                .show(getFragmentManager());
+                                .setNegativeButton(R.string.cancel, null)
+                                .show(getFragmentManager());
                         return true;
                     }
                     default: {

@@ -1,8 +1,9 @@
 package com.ddmeng.todorealm.home.viewholder;
 
-import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.TextView;
+
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.ddmeng.todorealm.R;
 import com.ddmeng.todorealm.data.models.Task;
@@ -62,10 +63,20 @@ public class HomeListViewHolder extends RecyclerView.ViewHolder implements Selec
         return false;
     }
 
+//    @Override
+//    public int getAdapterPosition() {
+//        return 0;
+//    }
+
     @Override
     public void setActivated(boolean activated) {
         itemView.setActivated(activated);
     }
+
+//    @Override
+//    public long getItemId() {
+//        return 0;
+//    }
 
     private int getTodoTaskCount(TodoList list) {
         int count = 0;

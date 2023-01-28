@@ -53,7 +53,7 @@ class HomeListPresenter implements HomeListContract.Presenter {
 
     @Override
     public void onDestroy() {
-        allLists.removeChangeListeners();
+        allLists.removeAllChangeListeners();
     }
 
     @Override

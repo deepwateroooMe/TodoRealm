@@ -32,7 +32,7 @@ public class SelectionsListAdapter extends RecyclerView.Adapter<RecyclerView.Vie
 
     @Override
     public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
-//        ((SelectionViewHolder) holder).populate(selections.get(position));
+        ((SelectionViewHolder) holder).populate(selections.get(position));
     }
 
     @Override

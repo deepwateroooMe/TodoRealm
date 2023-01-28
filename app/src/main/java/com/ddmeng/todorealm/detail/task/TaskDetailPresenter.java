@@ -37,7 +37,7 @@ public class TaskDetailPresenter implements TaskDetailContract.Presenter {
 
     @Override
     public void onDestroy() {
-        task.removeChangeListeners();
+        task.removeAllChangeListeners();
     }
 
     @Override

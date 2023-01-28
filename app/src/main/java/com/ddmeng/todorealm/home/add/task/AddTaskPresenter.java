@@ -99,7 +99,7 @@ public class AddTaskPresenter implements AddTaskContract.Presenter {
 
     @Override
     public void onDestroy() {
-        listsResults.removeChangeListeners();
+        listsResults.removeAllChangeListeners();
     }
 
 }
